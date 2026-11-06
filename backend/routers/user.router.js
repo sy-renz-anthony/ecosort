@@ -1,0 +1,23 @@
+import express from 'express';
+import userAuthentication from '../functions/userAuthentication.js';
+import {register, update, login, logout, changePassword, sendPasswordResetOTP, resetPassword, getMyInfo, searchEmployees, getAllEmployees, isOTPCodesCorrect, validateMyPassword, getAllUserNumberToSendSMS, setExpoPushNotificationToken, validateToken} from '../controllers/user.controller.js';
+
+const router =express.Router();
+
+router.post("/register", register);
+router.post("/login", login);
+router.post("/logout", userAuthentication, logout);
+router.post("/change-password", userAuthentication, changePassword);
+router.post("/password-reset-otp", sendPasswordResetOTP);
+router.post("/reset-password", resetPassword);
+router.post("/is-valid-otp", isOTPCodesCorrect);
+router.post("/validate-my-password", userAuthentication, validateMyPassword);
+router.put("/update", userAuthentication, update);
+router.get("/my-info", userAuthentication, getMyInfo);
+router.post("/check-token", userAuthentication, validateToken);
+router.get("/search-employees", userAuthentication, searchEmployees);
+router.get("/all", userAuthentication, getAllEmployees);
+router.get("/for-sms", getAllUserNumberToSendSMS);
+router.put("/set-notification-token", userAuthentication, setExpoPushNotificationToken);
+
+export default router;
