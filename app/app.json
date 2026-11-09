@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "ecosort",
+    "slug": "ecosort",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/ecosort-logo-square-small.png",
+    "scheme": "ecosort",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/expo.icon"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/ecosort-logo-square.png",
+        "backgroundImage": "./assets/images/ecosort-logo-square.png",
+        "monochromeImage": "./assets/images/ecosort-logo-square.png"
+      },
+      "predictiveBackGestureEnabled": false,
+       "softwarekeyboardLayoutMode": "adjustResize"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/ecosort-logo-square.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#208AEF",
+          "image": "./assets/images/ecosort-logo-square.png",
+          "imageWidth": 76
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/PlusJakartaSans-Regular.ttf",
+            "./assets/fonts/PlusJakartaSans-Bold.ttf",
+            "./assets/fonts/PlusJakartaSans-Medium.ttf",
+            "./assets/fonts/PlusJakartaSans-SemiBold.ttf",
+            "./assets/fonts/PlusJakartaSans-ExtraBold.ttf",
+            "./assets/fonts/PlusJakartaSans-Light.ttf"
+          ]
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
